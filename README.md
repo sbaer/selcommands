@@ -6,6 +6,10 @@ Rhino 5 (http://rhino3d.com/) plug-in that adds a few new "Sel" style commands t
 * SelByUserText - select all objects that have a given user text key
 * SelSmallSurface - select all surfaces / polysurfaces that have a bounding box diagonal smaller than a given value
 
+Downloading
+-----------
+NOTE: If you download the rhp file, you may need to right click and "unblock" the file before it can be used in Rhino
+
 
 Get Involved
 ------------
