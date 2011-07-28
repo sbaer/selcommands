@@ -17,6 +17,7 @@ namespace SelCommands
       return Rhino.Input.RhinoGet.GetString("key", true, ref m_key);
     }
 
+    // Classes derived from SelCommand are required to provide a SelFilter override
     protected override bool SelFilter(Rhino.DocObjects.RhinoObject rhObj)
     {
       // return true if the key exists for this object

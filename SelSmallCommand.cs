@@ -14,6 +14,7 @@ namespace SelCommands
       return Rhino.Input.RhinoGet.GetNumber("Bounding Box Diagonal", true, ref m_diagonal, 0.0000001, 1000000);
     }
 
+    // Classes derived from SelCommand are required to provide a SelFilter override
     protected override bool SelFilter(Rhino.DocObjects.RhinoObject rhObj)
     {
       var bbox = rhObj.Geometry.GetBoundingBox(false);
