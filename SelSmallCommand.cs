@@ -17,8 +17,13 @@ namespace SelCommands
     // Classes derived from SelCommand are required to provide a SelFilter override
     protected override bool SelFilter(Rhino.DocObjects.RhinoObject rhObj)
     {
-      var bbox = rhObj.Geometry.GetBoundingBox(false);
-      return bbox.Diagonal.Length <= m_diagonal;
+        //Make sure selected object is a surface
+        if (rhObj.Geometry.ObjectType == Rhino.DocObjects.ObjectType.Brep )
+        {
+            var bbox = rhObj.Geometry.GetBoundingBox(false);
+            return bbox.Diagonal.Length <= m_diagonal;
+        }
+        return false;
     }
   }
 }
