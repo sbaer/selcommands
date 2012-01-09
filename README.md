@@ -4,6 +4,7 @@ selcommands sample RhinoCommon plug-in
 Rhino 5 (http://rhino3d.com/) plug-in that adds a few new "Sel" style commands to Rhino.
 
 * SelByUserText - select all objects that have a given user text key
+* SelByLineWeight - select objects based on their line (plot) weight
 * SelSmallSurface - select all surfaces / polysurfaces that have a bounding box diagonal smaller than a given value
 
 Downloading
@@ -32,7 +33,7 @@ Steve Baer - https://github.com/sbaer steve@mcneel.com
 
 Legal Stuff
 -----------
-Copyright (c) 2011 Robert McNeel & Associates. All Rights Reserved.
+Copyright (c) 2012 Robert McNeel & Associates. All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
