@@ -6,6 +6,8 @@ Rhino 5 (http://rhino3d.com/) plug-in that adds a few new "Sel" style commands t
 * SelByUserText - select all objects that have a given user text key
 * SelByLineWeight - select objects based on their line (plot) weight
 * SelSmallSurface - select all surfaces / polysurfaces that have a bounding box diagonal smaller than a given value
+* SelArc - select all arcs using the current document tolerance. Full circular arcs are NOT selected
+* SelCircle - select all circles using the current document tolerance
 
 Downloading
 -----------
