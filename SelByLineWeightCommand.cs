@@ -20,13 +20,11 @@ namespace SelCommands
 
     protected override bool SelFilter(Rhino.DocObjects.RhinoObject rhObj)
     {
-      double weight = -1;
-      if (rhObj.Attributes.PlotWeightSource == Rhino.DocObjects.ObjectPlotWeightSource.PlotWeightFromObject)
-        weight = rhObj.Attributes.PlotWeight;
-      else
-        weight = rhObj.Document.Layers[rhObj.Attributes.LayerIndex].PlotWeight;
+      double weight = rhObj.Attributes.PlotWeightSource == Rhino.DocObjects.ObjectPlotWeightSource.PlotWeightFromObject ? 
+        rhObj.Attributes.PlotWeight : 
+        rhObj.Document.Layers[rhObj.Attributes.LayerIndex].PlotWeight;
 
-      return (m_val == weight);
+      return (Math.Abs(m_val-weight)<RhinoMath.ZeroTolerance);
     }
   }
 }

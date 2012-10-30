@@ -1,6 +1,3 @@
-using System;
-using Rhino;
-
 namespace SelCommands
 {
   ///<summary>
